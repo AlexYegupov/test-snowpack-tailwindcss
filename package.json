@@ -6,7 +6,8 @@
     "test": "echo \"This template does not include a test runner by default.\" && exit 1",
     "format": "prettier --write 'src/**/*.js'",
     "lint": "prettier --check 'src/**/*.js'",
-    "pp": "postcss"
+    "pp": "postcss",
+    "server": "(cd build && python -m SimpleHTTPServer 300`desktop`)"
   },
   "webDependencies": {
     "canvas-confetti": "^1.2.0"
