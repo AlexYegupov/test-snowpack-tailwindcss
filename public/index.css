@@ -1,3 +1,15 @@
+/* II base; */
+@tailwind base;
+
+/* II components */
+@tailwind components;
+
+
+
+:root {
+  --myred: hsl(351, 63%, 55%);
+}
+
 #img {
   display: block;
   margin: auto;
@@ -10,5 +22,94 @@
   display: block;
   margin: 2rem auto;
   width: 540px;
-  height: 540px;
+  height: 140px;
+  border: solid;
 }
+
+.red {
+  color: red;
+}
+
+.red-button {
+}
+
+.gray-postcss {
+  color: gray(60); 
+}
+
+.btn {
+  @apply font-bold py-2 px-4 rounded;
+  color: var(--myred)
+}
+
+.btn-blue {
+  @apply btn;
+  @apply bg-blue-500 text-white;
+}
+
+.btn-gray {
+  @apply btn;
+  @apply bg-gray-400 text-gray-800;
+}
+
+.test-width {
+  @apply text-red-500;
+}
+
+.test {
+  color: green;
+}
+
+.solid {
+  border: solid;
+}
+
+.banana {
+  color: orange;
+}
+
+.banana:hover {
+  color: yellow;
+}
+
+
+
+/* after custom components but before custom utilites */
+/* II utilites */
+@tailwind utilities;
+
+/* II my util */
+
+@responsive {
+  .rotate-0 {
+    transform: rotate(0deg);
+  }
+  .rotate-90 {
+    transform: rotate(90deg);
+  }
+  .rotate-180 {
+    transform: rotate(180deg);
+  }
+  .rotate-270 {
+    transform: rotate(270deg);
+  }
+}
+
+
+
+@variants focus, hover {
+  .rotate-0 {
+    transform: rotate(0deg);
+  }
+  .rotate-90 {
+    transform: rotate(90deg);
+  }
+  .rotate-180 {
+    transform: rotate(180deg);
+  }
+  .rotate-270 {
+    transform: rotate(270deg);
+  }
+}
+
+/* II end */
